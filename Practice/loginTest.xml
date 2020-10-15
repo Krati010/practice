@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+<listener class-name="practice.generic.MyTestListener"/>
+</listeners>
+
+  <test name="Test">
+   <parameter name="browser"  value="chrome"/>
+  <parameter name="baseurl"  value="http://localhost:8888/"/>
+    <classes>
+      <class name="practice.scripts.LoginTest">
+      <methods>
+      <include name= "validLogin"/>
+      </methods>
+    </class>  
+    </classes>
+  </test>
+ </suite> 
+ 
+ <!-- 
+ 
+ <listeners>
+<listener class-name="practice.generic.MyTestListener"/>
+</listeners>
+  <test name="Test1">
+   <parameter name="browser"  value="firefox"/>
+  <parameter name="baseurl"  value="http://localhost:8888/"/>
+  <classes>
+      <class name="practice.scripts.LoginTest">
+      <methods>
+       <include name= "product"/> 
+      </methods>
+      </class>
+     </classes>
+  </test> 
+</suite> 
+ -->
